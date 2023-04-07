@@ -1,0 +1,11 @@
+name: TestPlugin2
+version: '${project.version}'
+main: org.steel.testplugin2.TestPlugin2
+api-version: 1.19
+commands:
+  chicken:
+  TestCommand:
+  zombiechicken:
+  bigdig:
+  iamgod:
+  LightningStrike:
