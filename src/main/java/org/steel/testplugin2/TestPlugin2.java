@@ -53,6 +53,7 @@ public final class TestPlugin2 extends JavaPlugin implements Listener {
         getCommand("bigdig").setExecutor(new bigdig());
         getCommand("iamgod").setExecutor(new iamgod());
         getCommand("LightningStrike").setExecutor(new LightningStrike());
+        getCommand("Fly").setExecutor(new Fly());
         Bukkit.getPluginManager().registerEvents(this,this);
     }
 
@@ -1208,7 +1209,7 @@ public final class TestPlugin2 extends JavaPlugin implements Listener {
             Location spot = me.getLocation();
             World world = me.getWorld();
             //Create a massive explosion far far away
-            Location Explosion = new Location(world, me.getLocation().getX()+50,me.getLocation().getY(),me.getLocation().getZ());
+            Location Explosion = new Location(world, me.getLocation().getX()+10,me.getLocation().getY(),me.getLocation().getZ());
             world.spawn(Explosion, Horse.class);
             world.spawn(Explosion, Zombie.class);
             List<WeirdHorse> Victims = new ArrayList<WeirdHorse>();
@@ -1219,7 +1220,9 @@ public final class TestPlugin2 extends JavaPlugin implements Listener {
             for (WeirdHorse victim : Victims) {
                 world.spawn(Explosion,victim.getClass());
             }
-            world.createExplosion(Explosion, 75, true, true);
+            world.strikeLightning(Explosion);
+            //world.createExplosion(Explosion, 75, true, true);
+
 
         }
 

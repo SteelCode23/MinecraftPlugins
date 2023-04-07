@@ -27,11 +27,13 @@ public class bigdig implements CommandExecutor {
 
     public void executeCommand(CommandSender sender, String[] arguments){
 
-        double rad = 15;
+        double rad = 10;
         if(arguments.length>0){
             rad = Double.parseDouble(arguments[0]);
         }
         Player me = (Player) sender;
+        me.sendMessage(me.getFacing().toString());
+
         Location spot = me.getLocation();
         World world = me.getWorld();
 
