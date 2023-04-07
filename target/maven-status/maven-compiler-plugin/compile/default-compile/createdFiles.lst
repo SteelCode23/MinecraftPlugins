@@ -6,3 +6,4 @@ org/steel/testplugin2/TestCommand.class
 org/steel/testplugin2/TestPlugin2.class
 org/steel/testplugin2/TestPlugin2$Level.class
 org/steel/testplugin2/bigdig.class
+org/steel/testplugin2/Fly.class
