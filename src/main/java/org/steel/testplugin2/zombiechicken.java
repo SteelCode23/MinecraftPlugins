@@ -65,12 +65,6 @@ public class zombiechicken  implements CommandExecutor {
                 world.strikeLightning(rob.getLocation());
             }
 
-
-   
-
-
-
-
             int speed =(int) (Math. random() * 10);
             PotionEffect potion = new PotionEffect(PotionEffectType.SPEED,
                     Integer.MAX_VALUE,

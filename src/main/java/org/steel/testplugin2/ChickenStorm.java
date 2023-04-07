@@ -3,6 +3,7 @@ package org.steel.testplugin2;
 import java.util.logging.Logger;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -51,5 +52,6 @@ public class ChickenStorm implements CommandExecutor{
 
         }
         LOG.info(quantity + " chickens summoned");
+        world.playSound(spot, Sound.AMBIENT_NETHER_WASTES_LOOP, 30, 5);
     }
 }
